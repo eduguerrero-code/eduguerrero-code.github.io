@@ -1,238 +1,197 @@
-/*---------TOP MENUS---------*/
-
+/** {
+    border: 1px solid red;
+}
+*/
 html {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16,5%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16,5%;
 }
 
 
 .topmenu {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  text-align: right;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: right;
 }
 
 #logo {
-  width: 10%;
+    width: 10%;
 }
 
 .topmenu li {
 
-  display: inline;
-  height: 30px;
-  line-height: 60px;
-  width: 50%;
-  margin-right: 20px;
+    display: inline;
+    height: 30px;
+    line-height: 60px;
+    width: 50%;
+    margin-right: 20px;
 }
 
 .fly {
-  list-style: none;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
+    list-style: none;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .fly li,a {
-  display: inline;
-  width: 50%;
-  margin-right: 20px;
+    display: inline;
+    width: 50%;
+    margin-right: 20px;
 
 }
 
 .fly a {
-  text-decoration: none;
-  margin: 0 auto;
-}
-
-
-/*---------WeBegin---------*/
-
-/*---------INTRO---------*/
-
-
-
-.intro {
-  display: flex;
-  font-size: 1rem;
-  padding: 15px 100px;
-  margin-bottom: 30px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: rgb(204, 204, 204);
-}
-
-.introsection {
-  margin-right: 40px;
-  flex: 1 1 0px
-}
-
-.introsection h3 p {
-  flex: 1 1 0px
-}
-
-
-
-
-/*-----------------------*/
-
-/*---------RESEARCH---------*/
-
-
-.research1 {
-  display: flex;
-  padding: 50px 50px 10px 50px;
-  margin: 0;
-}
-
-.textoL {
-  font-size: 0.8rem;
-  line-height: 1.4rem;
-  text-align: left;
-  margin: 0 30px 0 30px;
-}
-
-.imagegallery {
-  padding-top: 55px;
-}
-.gallery{
-    display: flex;
-    margin-right: 100px;
+    text-decoration: none;
     margin: 0 auto;
-
-}
-.gallery img {
-   
-    width: 250px;
-    height: 200px;
 }
 
-.textoR {
-    font-size: 0.8rem;
-    line-height: 1.4rem;
-    text-align: right;
+/*-----------FILTER MENU----------*/
+/* Padding for whole body */
+
+body {
+    padding: 15px;
 }
 
-.research2 {
-  padding: 0 50px 0 50px;
+#filtering {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+       
+/* Anchor tag decoration */
+a {
+    text-decoration: none;
+    color: #5673C8;
+}
+       
+a:hover {
+    color: orange;
+}
+       
+.grid {
+    margin: 0px -14px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-
-/*----------POST-ITS----------*/
-
-.clas {
-  text-align: center;
+.grid-packaging {
+    margin: 0px -14px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
-.postits {
+       
+.column {
+    width: auto;
+    display: none;
+}
+       
+/* Content decoration */
+.content {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+}
+       
+/* Paragraph decoration */
+          
+.content {
+    background-color: white;
+    padding: 0px;
+}
+       
+.show {
     display: inline-block;
+    width: 300px;
+    height: 300px;
+    
+}
+       
+/* Style the filter buttons */
+.bttn {
+    border: none;
+    background: none;
+    padding: 8px 14px;
+}
+       
+.bttn:hover {
+    color: orange;
+    opacity: 1;
+}
+       
+.bttn.active {
+    background: none;
+    border: none;
+    font-weight: 600;
+}
+
+/*------Zoom over images------*/
+
+.img-hover-zoom {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+
+}
+
+.text{
+    display: none;
+    
+}
+
+.img-hover-zoom:hover .text {
+    display: block;
+    color: white;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.img-hover-zoom .text {
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px auto;
     text-align: center;
-    justify-items: center;
+    font-size: 0.8rem;
+    color: #fff;
+    max-width: 300px;
 
 }
-
-.postits,#note {
-  list-style:none;
+   
+/* Window size 850 width set */
+@media screen and (max-width: 850px) {
+    .column {
+        width: 50%;
+    }
 }
-
-.postits{
-  overflow:hidden;
-}
-.postits #note a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:8em;
-  width:8em;
-  padding: 0.2em;
-  margin-bottom: 2rem;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
-}
-.postits #note{
-  margin:0.5em;
-  float:left;
-}
-.postits #note h2{
-  font-size:100%;
-  font-weight:bold;
-  
-}
-.postits #note a{
-  -webkit-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-  -moz-transform:rotate(-6deg);
-}
-.postits #note:nth-child(even) a{
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
-}
-.postits #note:nth-child(3n) a{
-  -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
-}
-.postits #note:nth-child(5n) a{
-  -o-transform:rotate(5deg);
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  position:relative;
-  top:-10px;
-}
-.postits #note a:hover,.postits #note a:focus{
-  box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  position:relative;
-  z-index:5;
-}
-
-/*----------JOURNEY MAP----------*/
-
-.research2 {
-
-  padding: 50px 50px 10px 50px;
-  margin: 0;
-}
-.journey-map {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-}
-
-.journey-map-image {
-  width:auto;
-  text-align:center;
-  padding:20px; 
-}
-.journey-map-image>img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-
-}
-
-.quotes1 {
-    grid-column: 1;
-    grid-row: 1 / 4;
-}
-
-.quotes1 {
-    grid-column: 3;
-    grid-row: 1 / 4;
+   
+/* Window size 400 width set */
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%;
+    }
 }
