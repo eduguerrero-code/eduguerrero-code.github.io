@@ -8,9 +8,7 @@ html {
     font-size: 16,5%;
 }
 
-body {
-    height: fit-content;
-}
+
 .topmenu {
     display: flex;
     justify-content: space-between;
@@ -33,7 +31,7 @@ body {
 
 .fly {
     list-style: none;
-    width: 100%;
+    max-width: 100%;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -42,28 +40,12 @@ body {
     display: inline;
     width: 50%;
     margin-right: 20px;
-    
 
 }
 
 .fly a {
     text-decoration: none;
     margin: 0 auto;
-}
-.grid{
-    display: grid;
-    width: auto;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 50px;
-    column-gap: 100px;
-    justify-items: center;
-    max-height: 500px;
-    margin-top: 50px;
-    padding: 20px 70px 0 70px;
-}
-
-#filtering {
-    text-align: center;
 }
 
 /*-----------FILTER MENU----------*/
@@ -78,7 +60,7 @@ body {
     justify-content: center;
     margin-bottom: 25px;
 }
-.filter {
+.container {
     max-width: 1200px;
     margin: auto;
 }
@@ -113,6 +95,7 @@ a:hover {
        
 .column {
     width: auto;
+    display: none;
 }
        
 /* Content decoration */
@@ -121,7 +104,7 @@ a:hover {
     width: 300px;
     height: 300px;
 }
-
+       
 /* Paragraph decoration */
           
 .content {
@@ -154,24 +137,61 @@ a:hover {
     font-weight: 600;
 }
 
-.portfolioimages {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(6,1fr);
+/*------Zoom over images------*/
+
+.img-hover-zoom {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 
-#adidas {
-    height: 600px;
+.img-hover-zoom img {
+    transition: transform .5s ease;
+
 }
 
-#bud {
-    height: 600px;
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+
 }
 
-#peopleart {
-    height: 400px;
+.text{
+    display: none;
+    
 }
 
-#biobaxis {
-    height: 400px;
+.img-hover-zoom:hover .text {
+    display: block;
+    color: white;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.img-hover-zoom .text {
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    max-width: 300px;
+
+}
+   
+/* Window size 850 width set */
+@media screen and (max-width: 850px) {
+    .column {
+        width: 50%;
+    }
+}
+   
+/* Window size 400 width set */
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%;
+    }
 }
