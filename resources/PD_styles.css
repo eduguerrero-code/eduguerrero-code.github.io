@@ -175,3 +175,49 @@ a:hover {
 #biobaxis {
     height: 400px;
 }
+
+
+/*------Zoom over images------*/
+
+.img-hover-zoom {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+
+}
+
+.text{
+    display: none;
+    
+}
+
+.img-hover-zoom:hover .text {
+    display: block;
+    color: white;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.img-hover-zoom .text {
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    max-width: 300px;
+
+}
