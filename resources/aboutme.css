@@ -1,0 +1,255 @@
+/** {
+    border: 1px solid red;
+}
+*/
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16,5%;
+}
+
+body {
+    height: fit-content;
+}
+.topmenu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: right;
+}
+
+#logo {
+    width: 10%;
+}
+
+.topmenu li {
+
+    display: inline;
+    height: 30px;
+    line-height: 60px;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.fly {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fly li,a {
+    display: inline;
+    width: 50%;
+    margin-right: 20px;
+    
+
+}
+
+.fly a {
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+#bio {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 50px auto;
+    padding: 3%;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+
+h3 {
+    padding-left: 5rem;
+}
+
+/* MAIN HOME MENU */
+
+  .startmenu {
+      list-style: none;
+      padding: 10px 0 10px 0;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .startmenu>li {
+      list-style: none;
+  }
+
+    .table {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 30px auto;
+      align-items: top;
+      width: 40%;
+      column-gap: 10%;
+      row-gap: 10px;
+      column-gap: 20px;
+  }
+
+    #research {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+        font-weight: 700;
+        color: orange;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
+  }
+    #researchlist {
+        width:250px;
+        text-align: left;
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 0.9rem;
+    }
+
+    #ddlist {
+        width:250px;
+        text-align: left;
+        grid-column: 2;
+        grid-row: 2;
+        font-size: 0.9rem;
+    }
+
+    #pdlist {
+        width:250px;
+        text-align: left;
+        grid-column: 3;
+        grid-row: 2;
+        justify-self: start;
+        font-size: 0.9rem;
+    }
+
+    #stlist {
+        width:250px;
+        text-align: left;
+        grid-column: 4;
+        grid-row: 2;
+        font-size: 0.9rem;
+    }
+
+    #researchlist li {
+
+    }
+
+
+    #ST {
+        grid-column: 4;
+        grid-row: 1;
+        width: auto;
+        color: orange;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+    #PD {
+        grid-column: 3;
+        grid-row: 1;
+        width: auto;
+        color: orange;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+
+    #DD {
+        grid-column: 2;
+        grid-row: 1;
+        width: auto;
+        color: orange;
+        font-weight: 700;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 1rem; 
+    }
+
+    .startmenu li a{
+        text-decoration: none;
+        color:orange;
+    }
+
+    #Packaging {
+        grid-column: 5;
+        grid-row: 2;
+    }
+
+    /*----------------------------------------*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 0.1rem;
+    padding: 0 5rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .grid > div {
+    /*background: black;*/
+    padding: 1rem 3.5rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .grid > div::before {
+    content: "";
+    padding-bottom: 2rem;
+    display: block;
+  }
+
+  .grid > div {
+    /* ... */
+    display: grid;
+  }
+  .grid > div::before,
+  .grid > div > img {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100px;
+    height: 75px;
+    object-fit: contain;
+  }
+
+  /*------------TYPE WRITER--------*/
+  .typecontainer {
+        
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+      
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+color:black;
+font-size: 0.8rem;
+font-family: monospace;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid orange; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .15em; /* Adjust as needed */
+animation: 
+  typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+/*------------------------------------------------*/
