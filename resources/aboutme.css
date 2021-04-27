@@ -16,10 +16,21 @@ body {
     justify-content: space-between;
     list-style: none;
     text-align: right;
+    text-decoration: none;
 }
 
+.topmenu a {
+    text-decoration: none;
+    color: black;
+}
+
+
 #logo {
-    width: 10%;
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
 }
 
 .topmenu li {
@@ -54,21 +65,19 @@ body {
 #bio {
     text-align: center;
     width: 80%;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 5px auto;
     padding: 3%;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     font-size: 1.2rem;
 }
 
-h3 {
-    padding-left: 5rem;
-}
+
 
 /* MAIN HOME MENU */
 
   .startmenu {
       list-style: none;
-      padding: 10px 0 10px 0;
+      padding: 10px 0 0 0;
       margin: 0 auto;
       text-align: center;
   }
@@ -94,10 +103,11 @@ h3 {
         grid-row: 1;
         text-align: left;
         font-weight: 700;
-        color: orange;
+        color: black;
         font-family: Helvetica, sans-serif;
         text-transform: uppercase;
         font-size: 1rem;
+        color: orange;
   }
     #researchlist {
         width:250px;
@@ -105,6 +115,9 @@ h3 {
         grid-column: 1;
         grid-row: 2;
         font-size: 0.9rem;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4rem;
     }
 
     #ddlist {
@@ -113,6 +126,9 @@ h3 {
         grid-column: 2;
         grid-row: 2;
         font-size: 0.9rem;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4rem;
     }
 
     #pdlist {
@@ -122,6 +138,9 @@ h3 {
         grid-row: 2;
         justify-self: start;
         font-size: 0.9rem;
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4rem;
     }
 
     #stlist {
@@ -130,10 +149,9 @@ h3 {
         grid-column: 4;
         grid-row: 2;
         font-size: 0.9rem;
-    }
-
-    #researchlist li {
-
+        padding: 0;
+        list-style-type: none;
+        line-height: 1.4rem;
     }
 
 
@@ -141,34 +159,35 @@ h3 {
         grid-column: 4;
         grid-row: 1;
         width: auto;
-        color: orange;
         font-weight: 700;
         text-align: left;
         margin-bottom: 15px;
         text-transform: uppercase;
         font-size: 1rem;
+        color: orange;
     }
     #PD {
         grid-column: 3;
         grid-row: 1;
         width: auto;
-        color: orange;
         font-weight: 700;
         text-align: left;
         margin-bottom: 15px;
         text-transform: uppercase;
         font-size: 1rem;
+        color: orange;
+        
     }
 
     #DD {
         grid-column: 2;
         grid-row: 1;
         width: auto;
-        color: orange;
         font-weight: 700;
         text-align: left;
         text-transform: uppercase;
-        font-size: 1rem; 
+        font-size: 1rem;
+        color: orange;
     }
 
     .startmenu li a{
@@ -253,3 +272,72 @@ from, to { border-color: transparent }
 }
 
 /*------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+
+    body>nav{
+        width:100%;
+    }
+    .fly {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+        list-style: inside;
+        border: 1px solid green;
+    }
+    
+    .fly li {
+        border: 1px solid orange;
+        display: block;
+        width: 100%;
+
+    }
+    .fly a {
+        display: block;
+        width: 100%;
+        margin:0 auto;
+        border: 1px solid blue;
+    }
+
+
+
+    .topmenu {
+        display:block;
+        justify-content: center;
+    }
+
+    #logo {
+        margin: 0 auto;
+    }
+
+    .topmenu ul {
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        margin: 0 auto;
+    }
+
+    .topmenu li {
+        margin: 0 auto;
+    }
+
+/*----------- ABOUT ME ----------*/
+
+    .table {
+        border: 1px solid red;
+        display: block;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;    }
+    }
+
+    .typecontainer {
+        
+        display: block;
+        justify-content: center;
+        padding: 30px 0;
+        width: 300px;
+
+          
+    }
